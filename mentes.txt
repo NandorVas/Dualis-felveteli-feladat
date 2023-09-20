@@ -1,0 +1,176 @@
+for i in range(len(elsoUz)):
+    if elsoUz[i] == betu:
+        kulcs[i] = betu
+        for j in range(len(kulcsok)):
+            for k in range(keres(betu)):
+                if kulcsok[j][i] == kulcs[i]:
+                    segit[k] = segit[k] + 1
+    for j in range(len(segit)):
+        if segit[j] != 0:
+            if segit[j] < mini:
+                mini = segit[j]
+                index = j
+    segitBetu = abc[index]
+    for z in range(len(kulcsok)):
+        seg = kulcsok[i]
+        if len(seg) > len(kulcs):
+            for zz in range(len(kulcs)):
+                if kulcs[zz] == segitBetu:
+                    if seg[zz] != segitBetu:
+                        rosszak.append(seg)
+        if len(seg) < len(kulcs):
+            for zz in range(len(seg)):
+                if kulcs[zz] == segitBetu:
+                    if seg[zz] != segitBetu:
+                        rosszak.append(seg)
+    rosszak = set(rosszak)
+    rosszak = list(rosszak)
+    for i in range(len(rosszak)):
+        kulcsok.remove(rosszak[i])
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     for z in range(1, 10,-1):
+    print(z)
+    if n <= len(kulcsok):
+        z = 10
+    else:
+        betu = str(input("Adjon meg egy betűt amit tesztelni szeretne. (Az a-ra már nem kell.): "))
+
+        if len(elsoUz) < len(masodikUz):
+            for i in range(len(masodikUz)):
+                if masodikUz[i] == betu:
+                    for j in range(keres(betu)):
+                        segit.append(0)
+                        for k in range(len(kulcsok)):
+                            if kulcsok[k][i] == abc[j]:
+                                segit[j] += 1
+        else:
+            for i in range(len(elsoUz)):
+                if elsoUz[i] == betu:
+                    for j in range(keres(betu)):
+                        segit.append(0)
+                        for k in range(len(kulcsok)):
+                            if kulcsok[k][i] == abc[j]:
+                                segit[j] += 1
+
+        for i in range(len(segit)):
+            if segit[i] != 0:
+                if segit[i] < mini:
+                    mini = segit[i]
+
+        for i in range(len(segit)):
+            if segit[i] == mini:
+                index = i
+
+        if len(elsoUz) < len(masodikUz):
+            for i in range(len(masodikUz)):
+                if masodikUz[i] == betu:
+                    kulcs[i] = abc[index]
+        else:
+            for i in range(len(elsoUz)):
+                if elsoUz[i] == betu:
+                    kulcs[i] = abc[index]
+                    segitBetu = abc[index]
+
+        for i in range(len(kulcsok)):
+            seg = kulcsok[i]
+            if len(seg) > len(kulcs):
+                for j in range(len(kulcs)):
+                    if kulcs[j] == segitBetu:
+                        if seg[j] != segitBetu:
+                            rosszak.append(seg)
+            if len(seg) < len(kulcs):
+                for j in range(len(seg)):
+                    if kulcs[j] == segitBetu:
+                        if seg[j] != segitBetu:
+                            rosszak.append(seg)
+
+        rosszak = set(rosszak)
+        rosszak = list(rosszak)
+
+        for i in range(len(rosszak)):
+            kulcsok.remove(rosszak[i])
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+for i in range(len(kulcsok)):
+    seg = kulcsok[i]
+    if len(seg) > len(kulcs):
+        for j in range(len(kulcs)):
+            if kulcs[j] == "a":
+                if seg[j] != "a":
+                    rosszak.append(seg)
+                    print(i)
+    if len(seg) < len(kulcs):
+        for j in range(len(seg)):
+            if kulcs[j] == "a":
+                if seg[j] != "a":
+                    rosszak.append(seg)
+                    print(i)
+
+rosszak = set(rosszak)
+rosszak = list(rosszak)
+
+for j in range(len(rosszak)):
+    kulcsok.remove(rosszak[j])
+
+print(kulcsok)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+for adat in kulcsok:
+    for i in range(len(rosszak)):
+        kulcsok.remove(rosszak[i])
